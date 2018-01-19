@@ -51,7 +51,10 @@
         {
             try
             {
-                Clipboard.SetText(target.Text);
+                if (!string.IsNullOrEmpty(target.Text))
+                {
+                    Clipboard.SetText(target.Text);
+                }
             }
             catch (Exception ex)
             {
